@@ -2,6 +2,8 @@ package com.example.expensesapi.endpoint;
 
 import com.example.expensesapi.model.Expenses;
 import com.example.expensesapi.service.ExpensesService;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collections;
@@ -35,8 +37,11 @@ public class ExpensesController {
         return expensesService.save(expenses);
     }
 
-    @DeleteMapping("/expenses/{date}")
-    public void deleteByDate(@PathVariable Date date) {
+    @DeleteMapping("/expenses")
+    public ResponseEntity<String> deleteByDate(@RequestParam("date")
+                                                   @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
         expensesService.deleteByDate(date);
+        return ResponseEntity.ok("DELETED");
     }
+
 }
