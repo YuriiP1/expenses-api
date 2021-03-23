@@ -4,10 +4,12 @@ import com.example.expensesapi.model.Expenses;
 import com.example.expensesapi.repository.ExpensesRepository;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.List;
 
 @Service
+@Transactional
 public class ExpensesService {
 
     public final ExpensesRepository expensesRepository;
@@ -27,4 +29,5 @@ public class ExpensesService {
     public void deleteByDate(Date date) {
         expensesRepository.deleteByDate(date);
     }
+
 }
