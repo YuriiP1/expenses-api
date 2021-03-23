@@ -7,8 +7,7 @@ import java.util.Objects;
 @Entity
 public class Expenses {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "expenses_generator")
-    @SequenceGenerator(name = "expenses_generator", sequenceName = "expenses_seq", allocationSize = 50)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private double amount;
