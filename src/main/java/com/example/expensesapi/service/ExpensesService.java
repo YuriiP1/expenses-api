@@ -29,7 +29,7 @@ public class ExpensesService {
         return expensesRepository.save(expenses);
     }
 
-    @Transactional
+
     public List<Expenses> deleteByDate(Date date) {
         return expensesRepository.deleteByDate(date);
     }
