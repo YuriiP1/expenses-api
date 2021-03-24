@@ -30,8 +30,8 @@ public class ExpensesService {
     }
 
     @Transactional
-    public void deleteByDate(Date date) {
-        expensesRepository.deleteByDate(date);
+    public List<Expenses> deleteByDate(Date date) {
+        return expensesRepository.deleteByDate(date);
     }
 
     public double getTotal(String base) {
@@ -46,4 +46,7 @@ public class ExpensesService {
         return total;
     }
 
+    public long count() {
+        return expensesRepository.count();
+    }
 }
