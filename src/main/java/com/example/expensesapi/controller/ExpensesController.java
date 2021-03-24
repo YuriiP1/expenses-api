@@ -48,14 +48,8 @@ public class ExpensesController {
 
     @GetMapping("/total")
     public Map<String, Object> getTotal(@RequestParam String base) {
-        double total = 0;
-        List<Expenses> expenses = expensesService.findAll();
 
-        for(Expenses e : expenses) {
-            String url_str = "https://api.exchangerate.host/convert?from=" + e.getCurrency() + "&to=" + base;
-            Result result = restTemplate.getForObject(url_str,Result.class);
-            total += result.getResult();
-        }
+        double total = expensesService.getTotal(base);
 
         Map<String, Object> map = new HashMap<>();
 
