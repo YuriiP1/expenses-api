@@ -41,7 +41,8 @@ public class ExpensesController {
     @DeleteMapping("/expenses")
     public List<Expenses> deleteByDate(@RequestParam("date")
                                                    @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
-        List<Expenses> deleteExpenses = expensesService.deleteByDate(date);
+        List<Expenses> deleteExpenses = new ArrayList<>();
+        deleteExpenses = expensesService.deleteByDate(date);
         return deleteExpenses;
     }
 
