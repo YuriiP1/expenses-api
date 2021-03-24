@@ -1,4 +1,4 @@
-package com.example.expensesapi.endpoint;
+package com.example.expensesapi.controller;
 
 import com.example.expensesapi.model.Expenses;
 import com.example.expensesapi.service.ExpensesService;
