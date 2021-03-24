@@ -1,4 +1,4 @@
-# Test Problem(Intelliarts)
+# Expenses API (Test problem for Intelliarts)
 
 Personal expenses management application that allows users to track how much money have they spent. 
 
@@ -21,7 +21,7 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/expensesdb
 spring.datasource.username=???
 spring.datasource.password=???
 ```
-## Building project
+## Build and run project
 
 Clone the repository:
 ```bash
