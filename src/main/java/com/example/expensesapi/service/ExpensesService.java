@@ -6,7 +6,6 @@ import com.example.expensesapi.repository.ExpensesRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import javax.transaction.Transactional;
 import java.util.Date;
 import java.util.List;
 
