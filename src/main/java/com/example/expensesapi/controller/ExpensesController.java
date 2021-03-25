@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 public class ExpensesController {
 
     private final ExpensesService expensesService;
+    private final RestTemplate restTemplate;
 
     public ExpensesController(ExpensesService expensesService, RestTemplate restTemplate) {
         this.expensesService = expensesService;
