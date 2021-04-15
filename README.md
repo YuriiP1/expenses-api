@@ -1,4 +1,4 @@
-# Expenses API (Test problem for Intelliarts)
+# Expenses API 
 
 Personal expenses management application that allows users to track how much money have they spent. 
 
